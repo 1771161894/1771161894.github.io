@@ -6,7 +6,7 @@
 
 ## 当前内容
 
-- 自定义个人主页：研究兴趣、近期记录与联系方式
+- Chirpy 原生首页：按时间展示最近文章
 - 研究方向页：`_tabs/research.md`
 - 项目页：`_tabs/projects.md`
 - 关于页：`_tabs/about.md`
@@ -62,12 +62,11 @@ Markdown 中引用：
 [下载实验报告](/assets/files/report.pdf)
 ```
 
-## 修改个人主页
+## 修改站点信息
 
 | 内容 | 文件 |
 |---|---|
 | 姓名、站点标题、邮箱、域名 | `_config.yml` |
-| 首页介绍和关注方向 | `_layouts/home.html` |
 | 研究方向 | `_tabs/research.md` |
 | 项目经历 | `_tabs/projects.md` |
 | 个人介绍、教育经历、联系方式 | `_tabs/about.md` |

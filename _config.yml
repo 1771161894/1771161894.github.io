@@ -158,10 +158,8 @@ pwa:
     deny_paths:
       # - "/example"  # URLs match `<SITE_URL>/example/*` will not be cached by the PWA
 
-# The home page is a custom academic profile rather than a paginated post list.
-# Keep all posts in a single paginator page so Jekyll does not create duplicate
-# profile pages at /page2/, /page3/, and so on.
-paginate: 1000
+# Number of posts displayed on each home page.
+paginate: 10
 
 # The base URL of your site
 baseurl: ""
