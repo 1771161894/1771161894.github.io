@@ -1,5 +1,5 @@
 ---
-title: 项目
+title: projects
 icon: fas fa-diagram-project
 order: 2
 ---
