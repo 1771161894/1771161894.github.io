@@ -1,4 +1,5 @@
 ---
+title: 项目
 icon: fas fa-diagram-project
 order: 2
 ---
@@ -12,7 +13,7 @@ order: 2
 - **当前阶段**：从自建知识库迁移到 Jekyll Chirpy
 - **内容管理**：Markdown + Git 版本历史
 - **发布方式**：GitHub Actions 自动构建与 GitHub Pages
-- **站点地址**：[xchlab.top](https://xchlab.top)
+- **站点地址**：[当前预览站点](/)
 
 ## 后续项目
 

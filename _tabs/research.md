@@ -1,4 +1,5 @@
 ---
+title: 研究
 icon: fas fa-flask
 order: 1
 ---
