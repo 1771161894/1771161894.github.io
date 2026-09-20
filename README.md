@@ -6,7 +6,7 @@
 
 ## 当前内容
 
-- Chirpy 原生首页：按时间展示最近文章
+- 个人学术首页：头像、简介、简历概览与主要内容入口
 - 研究方向页：`_tabs/research.md`
 - 项目页：`_tabs/projects.md`
 - 关于页：`_tabs/about.md`
@@ -67,10 +67,11 @@ Markdown 中引用：
 | 内容 | 文件 |
 |---|---|
 | 姓名、站点标题、邮箱、域名 | `_config.yml` |
+| 首页姓名、简介、教育和经历 | `_data/profile.yml` |
 | 研究方向 | `_tabs/research.md` |
 | 项目经历 | `_tabs/projects.md` |
 | 个人介绍、教育经历、联系方式 | `_tabs/about.md` |
-| 头像 | `assets/img/avatar.svg` |
+| 头像 | `_config.yml` 中的 `avatar` |
 
 GitHub 用户名当前配置为 `1771161894`。文章页提供“在 GitHub 中编辑”入口，登录后可以直接通过网页修改 Markdown。
 

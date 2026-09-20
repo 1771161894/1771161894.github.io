@@ -99,11 +99,11 @@ theme_mode: # [light | dark]
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: /assets/img/avatar.svg
+avatar: https://avatars.githubusercontent.com/u/117551735?v=4
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
-social_preview_image: /assets/img/avatar.svg
+social_preview_image: https://avatars.githubusercontent.com/u/117551735?v=4
 
 # boolean type, the global switch for TOC in posts.
 toc: true
@@ -158,8 +158,9 @@ pwa:
     deny_paths:
       # - "/example"  # URLs match `<SITE_URL>/example/*` will not be cached by the PWA
 
-# Number of posts displayed on each home page.
-paginate: 10
+# The profile home does not use the post paginator. Keep one generated page so
+# Jekyll does not create duplicate profile pages under /page2/, /page3/, etc.
+paginate: 1000
 
 # The base URL of your site
 baseurl: ""
