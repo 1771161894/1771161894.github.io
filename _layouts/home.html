@@ -1,0 +1,87 @@
+---
+layout: default
+---
+
+{% include lang.html %}
+
+<article class="profile-home px-1">
+  <section class="profile-hero">
+    <p class="profile-kicker">PERSONAL ACADEMIC HOMEPAGE</p>
+    <h1>你好，我是 Xiao。</h1>
+    <p class="profile-lead">
+      这里记录我从算法基础走向科研实践的学习过程，包括人工智能、论文阅读、实验复盘、项目实践与长期思考。
+    </p>
+    <div class="profile-actions">
+      <a class="btn btn-primary" href="{{ '/research/' | relative_url }}">研究兴趣</a>
+      <a class="btn btn-outline-primary" href="{{ '/archives/' | relative_url }}">学习档案</a>
+      <a class="btn btn-outline-secondary" href="mailto:xxiao_6023@gmail.com">联系我</a>
+    </div>
+  </section>
+
+  <section class="profile-section">
+    <div class="profile-section-heading">
+      <div>
+        <p class="profile-kicker">CURRENTLY EXPLORING</p>
+        <h2>当前关注</h2>
+      </div>
+      <a href="{{ '/research/' | relative_url }}">查看研究页 <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="interest-grid">
+      <article class="interest-card">
+        <i class="fas fa-brain"></i>
+        <h3>人工智能</h3>
+        <p>系统学习机器学习与深度学习基础，逐步形成清晰、可验证的研究兴趣。</p>
+      </article>
+      <article class="interest-card">
+        <i class="fas fa-book-open"></i>
+        <h3>论文与科研方法</h3>
+        <p>记录论文阅读、问题定义、实验设计、复现过程以及失败经验。</p>
+      </article>
+      <article class="interest-card">
+        <i class="fas fa-code"></i>
+        <h3>算法与工程基础</h3>
+        <p>保留算法复盘、数据结构、代码模板和可复用的工程经验。</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="profile-section">
+    <div class="profile-section-heading">
+      <div>
+        <p class="profile-kicker">RECENT NOTES</p>
+        <h2>最近记录</h2>
+      </div>
+      <a href="{{ '/archives/' | relative_url }}">全部文章 <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+    <div class="recent-note-list">
+      {% for post in site.posts limit: 6 %}
+        <a class="recent-note" href="{{ post.url | relative_url }}">
+          <div>
+            <h3>{{ post.title }}</h3>
+            <p>{{ post.description | default: post.excerpt | strip_html | truncate: 110 }}</p>
+          </div>
+          <div class="recent-note-meta">
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y-%m-%d' }}</time>
+            {% if post.categories.size > 0 %}
+              <span>{{ post.categories | join: ' / ' }}</span>
+            {% endif %}
+          </div>
+        </a>
+      {% else %}
+        <p>文章迁移完成后，最近更新会显示在这里。</p>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="profile-section profile-contact">
+    <p class="profile-kicker">CONTACT</p>
+    <h2>保持联系</h2>
+    <p>如果你对这里的学习记录、项目或研究方向感兴趣，欢迎通过邮件交流。</p>
+    <p>
+      <a href="mailto:xxiao_6023@gmail.com">xxiao_6023@gmail.com</a>
+      <span aria-hidden="true"> · </span>
+      <a href="mailto:conghan_xiao@163.com">conghan_xiao@163.com</a>
+    </p>
+  </section>
+</article>

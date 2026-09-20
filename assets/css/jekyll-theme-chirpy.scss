@@ -1,0 +1,175 @@
+---
+---
+
+@use 'abstracts/variables' with (
+  $theme: '{{ site.theme_mode }}'
+);
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+.profile-home {
+  --profile-accent: var(--link-color);
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.profile-hero {
+  padding: clamp(2rem, 6vw, 5rem) 0 clamp(2.5rem, 7vw, 5.5rem);
+  border-bottom: 1px solid var(--main-border-color);
+}
+
+.profile-kicker {
+  margin-bottom: 0.75rem;
+  color: var(--profile-accent);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.profile-hero h1 {
+  margin-bottom: 1.25rem;
+  font-size: clamp(2.25rem, 6vw, 4.4rem);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+}
+
+.profile-lead {
+  max-width: 760px;
+  margin-bottom: 1.7rem;
+  color: var(--text-muted-color);
+  font-size: clamp(1.05rem, 2vw, 1.28rem);
+  line-height: 1.85;
+}
+
+.profile-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.profile-section {
+  padding: clamp(2.5rem, 6vw, 4.5rem) 0;
+  border-bottom: 1px solid var(--main-border-color);
+}
+
+.profile-section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.6rem;
+}
+
+.profile-section-heading h2,
+.profile-contact h2 {
+  margin: 0;
+}
+
+.interest-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.interest-card {
+  min-height: 220px;
+  padding: 1.35rem;
+  border: 1px solid var(--main-border-color);
+  border-radius: 0.8rem;
+  background: var(--card-bg);
+  transition: transform 160ms ease, border-color 160ms ease;
+}
+
+.interest-card:hover {
+  border-color: var(--profile-accent);
+  transform: translateY(-3px);
+}
+
+.interest-card > i {
+  margin-bottom: 2.2rem;
+  color: var(--profile-accent);
+  font-size: 1.3rem;
+}
+
+.interest-card h3 {
+  margin-bottom: 0.65rem;
+}
+
+.interest-card p,
+.recent-note p,
+.profile-contact p {
+  color: var(--text-muted-color);
+  line-height: 1.75;
+}
+
+.recent-note-list {
+  border-top: 1px solid var(--main-border-color);
+}
+
+.recent-note {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1.5rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--main-border-color);
+  color: inherit;
+  text-decoration: none;
+}
+
+.recent-note:hover h3 {
+  color: var(--profile-accent);
+}
+
+.recent-note h3,
+.recent-note p {
+  margin-bottom: 0.35rem;
+}
+
+.recent-note-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 0.35rem;
+  color: var(--text-muted-color);
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.profile-contact {
+  border-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .interest-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .interest-card {
+    min-height: 0;
+  }
+
+  .interest-card > i {
+    margin-bottom: 1.2rem;
+  }
+
+  .recent-note {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
+
+  .recent-note-meta {
+    flex-direction: row;
+    align-items: center;
+    white-space: normal;
+  }
+
+  .profile-section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
