@@ -30,12 +30,13 @@
 
 .academic-photo {
   margin: 0;
+  aspect-ratio: 4 / 5;
 }
 
 .academic-photo img {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 5;
+  height: 100%;
   border: 1px solid var(--main-border-color);
   border-radius: 0.75rem;
   object-fit: cover;
