@@ -1,0 +1,154 @@
+---
+---
+
+@use 'abstracts/variables' with (
+  $theme: '{{ site.theme_mode }}'
+);
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* A concise academic profile rendered entirely inside Chirpy. */
+.academic-home {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: clamp(2rem, 5vw, 4.25rem) 0 3rem;
+}
+
+.academic-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(170px, 220px);
+  align-items: center;
+  gap: clamp(2.5rem, 7vw, 5rem);
+  padding-bottom: clamp(2.75rem, 6vw, 4.5rem);
+}
+
+.academic-intro h1 {
+  margin: 0 0 0.65rem;
+  font-size: clamp(2.75rem, 6vw, 4.35rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.academic-role {
+  margin-bottom: 1.4rem;
+  color: var(--text-muted-color);
+  font-size: 1.08rem;
+}
+
+.academic-summary {
+  max-width: 620px;
+  margin-bottom: 1.5rem;
+  font-size: 1.03rem;
+  line-height: 1.9;
+}
+
+.academic-photo {
+  margin: 0;
+  aspect-ratio: 4 / 5;
+}
+
+.academic-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--main-border-color);
+  border-radius: 0.35rem;
+  object-fit: cover;
+}
+
+.academic-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem 1.4rem;
+  font-size: 0.95rem;
+}
+
+.academic-contact a,
+.academic-links a {
+  text-decoration: none;
+}
+
+.academic-profile {
+  border-top: 1px solid var(--main-border-color);
+}
+
+.academic-profile-section {
+  display: grid;
+  grid-template-columns: minmax(7rem, 10rem) minmax(0, 1fr);
+  gap: clamp(1.5rem, 5vw, 4rem);
+  padding: 1.65rem 0;
+  border-bottom: 1px solid var(--main-border-color);
+}
+
+.academic-profile-section h2 {
+  margin: 0;
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+.academic-profile-section > div {
+  color: var(--text-muted-color);
+  line-height: 1.8;
+}
+
+.academic-profile-section p {
+  margin: 0;
+}
+
+.profile-placeholder {
+  opacity: 0.68;
+}
+
+.academic-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  padding-top: 1.75rem;
+}
+
+.academic-links i {
+  margin-left: 0.25rem;
+  font-size: 0.78em;
+}
+
+main:has(.academic-home) + #panel-wrapper {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  #main-wrapper:has(.academic-home) main,
+  #main-wrapper:has(.academic-home) #tail-wrapper {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .academic-home {
+    padding-top: 1.25rem;
+  }
+
+  .academic-intro {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .academic-photo {
+    grid-row: 1;
+    width: min(46vw, 170px);
+  }
+
+  .academic-profile-section {
+    grid-template-columns: 1fr;
+    gap: 0.45rem;
+  }
+
+  .academic-links {
+    flex-direction: column;
+  }
+}

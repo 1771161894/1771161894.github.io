@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Xiao</title>
+  <desc id="desc">A simple monogram avatar with the letter X.</desc>
+  <rect width="512" height="512" rx="256" fill="#202127"/>
+  <circle cx="256" cy="256" r="220" fill="none" stroke="#7396f5" stroke-width="8" opacity="0.75"/>
+  <path d="M150 142h62l45 75 45-75h60l-73 112 79 116h-63l-50-79-49 79h-62l80-117z" fill="#f4f5f7"/>
+</svg>

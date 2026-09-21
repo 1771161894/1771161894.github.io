@@ -1,0 +1,15 @@
+# 首页个人资料。直接填写引号中的内容即可，不需要修改 HTML。
+
+name: Xiao
+headline: ""
+bio: ""
+
+sections:
+  - label: 关于我
+    value: ""
+  - label: 研究兴趣
+    value: ""
+  - label: 教育经历
+    value: ""
+  - label: 兴趣爱好
+    value: ""
