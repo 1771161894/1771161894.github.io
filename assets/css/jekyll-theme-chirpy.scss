@@ -12,6 +12,20 @@
 {%- endif -%}
 ';
 
+/* Keep Chirpy's native theme menu visible in every color mode. */
+#sidebar .sidebar-bottom #mode-toggle > i {
+  display: none !important;
+}
+
+:root[data-bs-theme='light'] #sidebar .sidebar-bottom #mode-toggle > i[data-theme-mode='light'],
+:root:not([data-bs-theme]) #sidebar .sidebar-bottom #mode-toggle > i[data-theme-mode='system'] {
+  display: block !important;
+}
+
+:root[data-bs-theme='dark'] #sidebar .sidebar-bottom #mode-toggle > i[data-theme-mode='dark'] {
+  display: block !important;
+}
+
 /* A concise academic profile rendered entirely inside Chirpy. */
 .academic-home {
   max-width: 900px;
